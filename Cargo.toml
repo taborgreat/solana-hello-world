@@ -1,0 +1,15 @@
+[package]
+name = "hello-world"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+solana-program = "1.18.15"
+
+[lib]
+name = "hello_world"
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = "z"  # Optimize for size
+lto = true       # Enable Link-Time Optimization
